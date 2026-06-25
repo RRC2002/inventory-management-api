@@ -1,12 +1,11 @@
 from flask import Flask
-from config import SQLALCHEMY_DATABASE_URI, SQLALCHEMY_TRACK_MODIFICATIONS
+from config import Config
 from models import db
 from routes import register_routes
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = SQLALCHEMY_TRACK_MODIFICATIONS
+app.config.from_object(Config)
 
 db.init_app(app)
 
