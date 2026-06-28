@@ -4,29 +4,41 @@ A RESTful API built with Flask, SQLAlchemy, and MySQL for managing product inven
 
 ## Features
 
-- Add new products
-- View all products
-- Update product details
-- Delete products
-- Get inventory summary
-- Cloud deployment with Railway
-- MySQL database integration
+* Add new products
+* View all products
+* Update product details
+* Delete products
+* Get inventory summary
+* Cloud deployment with Railway
+* MySQL database integration
 
 ## Tech Stack
 
-- Python
-- Flask
-- Flask-SQLAlchemy
-- MySQL
-- Railway
-- Thunder Client
+* Python
+* Flask
+* Flask-SQLAlchemy
+* MySQL
+* Railway
+* Thunder Client
+
+## Live API
+
+https://web-production-26a59.up.railway.app
+
+## GitHub Repository
+
+https://github.com/RRC2002/inventory-management-api
+
+---
 
 ## API Endpoints
 
 ### Get all products
-GET /products
+
+**GET /products**
 
 Response:
+
 ```json
 [
   {
@@ -38,10 +50,14 @@ Response:
 ]
 ```
 
+---
+
 ### Add a product
-POST /products
+
+**POST /products**
 
 Request Body:
+
 ```json
 {
   "name": "Laptop",
@@ -51,16 +67,21 @@ Request Body:
 ```
 
 Response:
+
 ```json
 {
   "message": "Product added successfully!"
 }
 ```
 
+---
+
 ### Update product
-PUT /products/<id>
+
+**PUT /products/<id>**
 
 Request Body:
+
 ```json
 {
   "name": "Laptop",
@@ -69,20 +90,28 @@ Request Body:
 }
 ```
 
+---
+
 ### Delete product
-DELETE /products/<id>
+
+**DELETE /products/<id>**
 
 Response:
+
 ```json
 {
   "message": "Product deleted successfully!"
 }
 ```
 
+---
+
 ### Inventory summary
-GET /products/summary
+
+**GET /products/summary**
 
 Response:
+
 ```json
 {
   "total_inventory_value": 250000,
@@ -91,10 +120,7 @@ Response:
 }
 ```
 
-## Live Demo
-
-Base URL:
-https://web-production-26a59.up.railway.app
+---
 
 ## Installation
 
@@ -117,10 +143,12 @@ Run project:
 python app.py
 ```
 
+---
+
 ## Deployment
 
 Deployed on Railway with MySQL database integration.
 
 ## Author
 
-Rajashree Roy Choudhury
+**Rajashree Roy Choudhury**
